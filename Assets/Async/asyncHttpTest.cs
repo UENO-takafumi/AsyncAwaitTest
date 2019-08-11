@@ -6,14 +6,9 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using UniRx.Async;
 
-public class asyncHttpTest
+public class AsyncHttpTest
 {
-    public void taskRun(Text label, Text stateLabel)
-    {
-        AsyncHttpRequest("https://api.etherscan.io/api?module=proxy", label, stateLabel);
-    }
-
-    private async Task AsyncHttpRequest(string urlstr, Text label, Text stateLabel)
+    public async Task Request(string urlstr, Text label, Text stateLabel)
     {
         stateLabel.text = "AsyncStartTask";
 
